@@ -17,7 +17,7 @@ getHabit(id: number): Observable<any> {
 }
 
 addHabit(habit: Object): Observable<any> {
-  return this.http.post("http://localhost:8080/habit", habit);
+  return this.http.post("https://habit-remainder-backend.herokuapp.com/habit", habit);
 }
 
 updateHabit(id: number, value: any): Observable<Object> {
@@ -25,7 +25,7 @@ updateHabit(id: number, value: any): Observable<Object> {
 }
 
 deleteHabit(id: number): Observable<any> {
-  return this.http.delete("http://localhost:8080/habit/"+id, { responseType: 'text' });
+  return this.http.delete("https://habit-remainder-backend.herokuapp.com/habit/"+id, { responseType: 'text' });
 }
 
 getHabitsList(): Observable<any> {

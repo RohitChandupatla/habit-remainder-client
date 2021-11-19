@@ -3,35 +3,25 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<div class="login-wrap">
-	<div class="login-html">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Forgot Password</label>
-		<div class="login-form">
-			<div class="sign-in-htm">
-				<div class="group">
-					<label for="user" class="label">Username or Email</label>
-					<input id="user" type="text" class="input">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign In">
-				</div>
-				<div class="hr"></div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+		    
+		    <label>Current Password</label>
+		    <div class="form-group pass_show"> 
+                <input type="password" value="faisalkhan@123" class="form-control" placeholder="Current Password"> 
+            </div> 
+		       <label>New Password</label>
+            <div class="form-group pass_show"> 
+                <input type="password" value="faisal.khan@123" class="form-control" placeholder="New Password"> 
+            </div> 
+		       <label>Confirm Password</label>
+            <div class="form-group pass_show"> 
+                <input type="password" value="faisal.khan@123" class="form-control" placeholder="Confirm Password"> 
+            </div> 
+			<div><button type="submit" routerLink="/home" class="btn btn-outline-secondary">Reset</button>
 			</div>
-			<div class="for-pwd-htm">
-				<div class="group">
-					<label for="user" class="label">Username or Email</label>
-					<input id="user" type="text" class="input">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Reset Password">
-				</div>
-				<div class="hr"></div>
-			</div>
-		</div>
+            
+		</div>  
 	</div>
 </div>

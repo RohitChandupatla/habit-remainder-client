@@ -29,6 +29,6 @@ deleteHabit(id: number): Observable<any> {
 }
 
 getHabitsList(): Observable<any> {
-  return this.http.get(`${this.baseUrl}/allHabits`);
+  return this.http.get("https://habit-remainder-backend.herokuapp.com/allHabits");
 }
 }

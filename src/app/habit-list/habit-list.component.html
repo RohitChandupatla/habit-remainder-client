@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>My Habit</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Habit</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let habit of habits | async">
+            <td>{{habit.id}}</td>
+            <td>{{habit.habit}}</td>
+            <td>{{habit.description}}</td>
+            <td>
+               
+                <button (click)="deleteHabit(habit.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateHabit(habit.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="habitDetails(habit.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

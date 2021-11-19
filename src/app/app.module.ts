@@ -9,6 +9,13 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ResetComponent } from './reset/reset.component';
+import { HabitDetailsComponent } from './habit-details/habit-details.component';
+import { AddHabitComponent } from './add-habit/add-habit.component';
+import { EditHabitComponent } from './edit-habit/edit-habit.component';
+import { HabitListComponent } from './habit-list/habit-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HabitService } from './habit.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +25,19 @@ import { ResetComponent } from './reset/reset.component';
     SignUpComponent,
     HeaderComponent,
     FooterComponent,
-    ResetComponent
+    ResetComponent,
+    HabitDetailsComponent,
+    AddHabitComponent,
+    EditHabitComponent,
+    HabitListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HabitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
